@@ -1,0 +1,165 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5459,        155]
+NotebookOptionsPosition[      4442,        130]
+NotebookOutlinePosition[      4864,        147]
+CellTagsIndexPosition[      4821,        144]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "\:7ed9\:5b9a\:503c", "*)"}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{"sampleMean1", "=", "112"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"sampleMean2", "=", "121"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"populationStdDev", "=", "8"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"n1", "=", "10"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"n2", "=", "10"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"\:8ba1\:7b97", " ", "Z", " ", "\:7edf\:8ba1\:91cf"}], "*)"}], 
+   "\n", 
+   RowBox[{
+    RowBox[{"zStatistic", "=", "2.52"}], ";"}], "\n", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"\:8ba1\:7b97", " ", "P"}], "-", "value"}], "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"pValue", "=", 
+     RowBox[{"1", "-", 
+      RowBox[{"CDF", "[", 
+       RowBox[{
+        RowBox[{"NormalDistribution", "[", "]"}], ",", "zStatistic"}], 
+       "]"}]}]}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", "\:8f93\:51fa\:7ed3\:679c", "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<Z Statistic: \>\"", ",", "zStatistic"}], "]"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<P-value: \>\"", ",", "pValue"}], "]"}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", "\:8fdb\:884c\:5047\:8bbe\:68c0\:9a8c", "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"alpha", "=", "0.05"}], ";"}], " ", 
+   RowBox[{"(*", 
+    RowBox[{"\:663e\:8457\:6027\:6c34\:5e73", " ", "5", "%"}], "*)"}], "\n", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{"pValue", "<", "alpha"}], ",", 
+     RowBox[{
+     "Print", "[", 
+      "\"\<Reject H0: There is evidence that the new drying ingredient \
+reduces the drying time.\>\"", "]"}], ",", 
+     RowBox[{
+     "Print", "[", 
+      "\"\<Fail to reject H0: There is no significant evidence that the new \
+drying ingredient reduces the drying time.\>\"", "]"}]}], "]"}], 
+   "\n"}]}]], "Input",
+ CellChangeTimes->{
+  3.89994328903358*^9, {3.899943464011139*^9, 3.8999435225828276`*^9}, {
+   3.8999435816554875`*^9, 3.899943587980286*^9}, {3.8999436199449887`*^9, 
+   3.899943620276483*^9}, {3.899943694456957*^9, 3.899943734683443*^9}},
+ CellLabel->
+  "In[236]:=",ExpressionUUID->"712b0426-7398-45b2-a04c-5993bd29ad26"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Z Statistic: \"\>", "\[InvisibleSpace]", "2.52`"}],
+  SequenceForm["Z Statistic: ", 2.52],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.899943700599086*^9, 3.8999437359464464`*^9}},
+ CellLabel->
+  "\:6b63\:5728\:8ba1\:7b97In[236]:=",ExpressionUUID->"bb6b6f0f-858b-4f12-\
+b7c3-4701cf9fe0cb"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"P-value: \"\>", "\[InvisibleSpace]", "0.005867741715332553`"}],
+  SequenceForm["P-value: ", 0.005867741715332553],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.899943700599086*^9, 3.899943735948517*^9}},
+ CellLabel->
+  "\:6b63\:5728\:8ba1\:7b97In[236]:=",ExpressionUUID->"a3649c3e-1c45-42df-\
+81b3-4b58f01cd30a"],
+
+Cell[BoxData["\<\"Reject H0: There is evidence that the new drying ingredient \
+reduces the drying time.\"\>"], "Print",
+ CellChangeTimes->{{3.899943700599086*^9, 3.899943735953467*^9}},
+ CellLabel->
+  "\:6b63\:5728\:8ba1\:7b97In[236]:=",ExpressionUUID->"3f5f8671-1c64-413f-\
+80df-27a791ad0a1b"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.899943693396613*^9, 
+  3.8999436933986177`*^9}},ExpressionUUID->"48bd7c8d-edbb-4afe-bc43-\
+2937736dbb49"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.899943500385851*^9},
+ NumberMarks->False,ExpressionUUID->"428e173a-4ff9-4d29-bcc1-69eb0d106401"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.899943502465003*^9, 
+  3.8999435027131977`*^9}},ExpressionUUID->"23e7d569-87ed-4d07-878e-\
+5c3e86fca867"]
+},
+WindowSize->{818.25, 459.},
+WindowMargins->{{Automatic, 79.125}, {40.5, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (2022\:5e748\:670822\
+\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"67549851-ac8f-413b-8f18-21f28e15afee"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 2333, 61, 564, "Input",ExpressionUUID->"712b0426-7398-45b2-a04c-5993bd29ad26"],
+Cell[CellGroupData[{
+Cell[2938, 87, 346, 8, 22, "Print",ExpressionUUID->"bb6b6f0f-858b-4f12-b7c3-4701cf9fe0cb"],
+Cell[3287, 97, 368, 8, 22, "Print",ExpressionUUID->"a3649c3e-1c45-42df-81b3-4b58f01cd30a"],
+Cell[3658, 107, 295, 5, 22, "Print",ExpressionUUID->"3f5f8671-1c64-413f-80df-27a791ad0a1b"]
+}, Open  ]]
+}, Open  ]],
+Cell[3980, 116, 154, 3, 28, InheritFromParent,ExpressionUUID->"48bd7c8d-edbb-4afe-bc43-2937736dbb49"],
+Cell[4137, 121, 144, 2, 28, "Input",ExpressionUUID->"428e173a-4ff9-4d29-bcc1-69eb0d106401"],
+Cell[4284, 125, 154, 3, 28, InheritFromParent,ExpressionUUID->"23e7d569-87ed-4d07-878e-5c3e86fca867"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

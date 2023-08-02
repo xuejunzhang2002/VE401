@@ -1,0 +1,104 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3431,         96]
+NotebookOptionsPosition[      2930,         78]
+NotebookOutlinePosition[      3352,         95]
+CellTagsIndexPosition[      3309,         92]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "\:5b9a\:4e49\:81ea\:7531\:5ea6\:53c2\:6570", "*)"}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{"degreesOfFreedom", "=", "10"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", "\:521b\:5efaT\:5206\:5e03\:5bf9\:8c61", "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"tDist", "=", 
+     RowBox[{"StudentTDistribution", "[", "degreesOfFreedom", "]"}]}], ";"}], 
+   "\n", "\[IndentingNewLine]", 
+   RowBox[{"(*", "\:7ed9\:5b9a\:6982\:7387\:503c", "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"probability", "=", "0.05"}], ";"}], "\n", "\[IndentingNewLine]", 
+   RowBox[{
+   "(*", "\:8ba1\:7b97T\:5206\:5e03\:5728\:7ed9\:5b9a\:6982\:7387\:503c\:4e0b\
+\:7684\:503c", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"tValue", "=", 
+     RowBox[{"Quantile", "[", 
+      RowBox[{"tDist", ",", 
+       RowBox[{"1", "-", "probability"}]}], "]"}]}], ";"}], "\n", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", "\:8f93\:51fa\:7ed3\:679c", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<T Value for 95% confidence level and 10 degrees of freedom: \>\"", 
+      ",", "tValue"}], "]"}], ";"}], "\n"}]}]], "Input",
+ CellChangeTimes->{{3.8999028245607104`*^9, 3.8999028245636215`*^9}, {
+  3.8999028586385965`*^9, 3.8999028947650614`*^9}, {3.8999029331673665`*^9, 
+  3.8999029609094334`*^9}, {3.8999030035342646`*^9, 3.899903027098898*^9}, {
+  3.899937726071701*^9, 3.8999377269326305`*^9}, {3.899937759587308*^9, 
+  3.8999377867377443`*^9}, {3.899937875960479*^9, 3.8999378837071905`*^9}},
+ CellLabel->
+  "In[161]:=",ExpressionUUID->"266d1fc1-6583-4a81-96bb-eb43853d52cc"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"T Value for 95% confidence level and 10 degrees of freedom: \"\
+\>", "\[InvisibleSpace]", "1.812461122811676`"}],
+  SequenceForm[
+  "T Value for 95% confidence level and 10 degrees of freedom: ", 
+   1.812461122811676],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.8999028631556835`*^9, 3.8999028963937435`*^9}, 
+   3.8999029633727846`*^9, {3.899903021037702*^9, 3.8999030291163816`*^9}, 
+   3.899937728903877*^9, {3.8999377611542044`*^9, 3.899937788422333*^9}, 
+   3.8999378855606885`*^9},
+ CellLabel->
+  "\:6b63\:5728\:8ba1\:7b97In[161]:=",ExpressionUUID->"d1bd1b00-c4ef-4d04-\
+a816-05db0db829f1"]
+}, Open  ]]
+},
+WindowSize->{573.75, 601.5},
+WindowMargins->{{Automatic, 12}, {-12.375, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (2022\:5e748\:670822\
+\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"1510940b-81d3-4226-8663-a018f7afdc37"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1676, 37, 363, "Input",ExpressionUUID->"266d1fc1-6583-4a81-96bb-eb43853d52cc"],
+Cell[2259, 61, 655, 14, 22, "Print",ExpressionUUID->"d1bd1b00-c4ef-4d04-a816-05db0db829f1"]
+}, Open  ]]
+}
+]
+*)
+

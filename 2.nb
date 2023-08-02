@@ -1,0 +1,222 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7830,        214]
+NotebookOptionsPosition[      6883,        188]
+NotebookOutlinePosition[      7306,        205]
+CellTagsIndexPosition[      7263,        202]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"\n", 
+  RowBox[{"(*", "\:5b9a\:4e49\:81ea\:7531\:5ea6\:53c2\:6570", "*)"}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{"degreesOfFreedom", "=", "7"}], ";"}], "\[IndentingNewLine]", 
+   "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"\:521b\:5efa\[Chi]", "^", "2"}], "\:5206\:5e03\:5bf9\:8c61"}], 
+    "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"chiSquareDist", "=", 
+     RowBox[{"ChiSquareDistribution", "[", "degreesOfFreedom", "]"}]}], ";"}],
+    "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", "\:7ed9\:5b9a\:6982\:7387\:503c", "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"probability", "=", "0.01"}], ";"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"\:8ba1\:7b97\[Chi]", "^", "2"}], 
+     "\:5206\:5e03\:5728\:7ed9\:5b9a\:6982\:7387\:503c\:4e0b\:7684\:503c"}], 
+    "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"chiValue", "=", 
+    RowBox[{"InverseCDF", "[", 
+     RowBox[{"chiSquareDist", ",", 
+      RowBox[{"1", "-", "probability"}]}], "]"}]}], "\n", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", "\:8f93\:51fa\:7ed3\:679c", "*)"}]}]}]], "Input",
+ CellChangeTimes->{{3.8997214259881773`*^9, 3.899721430078479*^9}, {
+   3.8997218351469336`*^9, 3.8997218377470846`*^9}, {3.8997219133588505`*^9, 
+   3.8997219143835106`*^9}, 3.899896887575934*^9, 3.899896918655513*^9, {
+   3.899897224281145*^9, 3.899897229043603*^9}, {3.89989745776306*^9, 
+   3.899897477319153*^9}, {3.899897567269456*^9, 3.899897605055463*^9}, {
+   3.8998979103888016`*^9, 3.8998979107729635`*^9}, {3.8998982239657497`*^9, 
+   3.8998982257586327`*^9}},
+ CellLabel->
+  "In[179]:=",ExpressionUUID->"9d9a5dca-2e5a-4ed5-9d74-ce8c23596f96"],
+
+Cell[BoxData["18.47530690658236`"], "Output",
+ CellChangeTimes->{
+  3.899897230142556*^9, {3.8998979020798607`*^9, 3.899897912085698*^9}, 
+   3.899898226526543*^9},
+ CellLabel->
+  "Out[182]=",ExpressionUUID->"86520e81-94fb-4efa-b6c5-9ef34b49edf4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "\:5b9a\:4e49\:81ea\:7531\:5ea6\:53c2\:6570", "*)"}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{"degreesOfFreedom", "=", "7"}], ";"}], "\[IndentingNewLine]", 
+   "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"\:521b\:5efa\[Chi]", "^", "2"}], "\:5206\:5e03\:5bf9\:8c61"}], 
+    "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"chiSquareDist", "=", 
+     RowBox[{"ChiSquareDistribution", "[", "degreesOfFreedom", "]"}]}], ";"}],
+    "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", "\:7ed9\:5b9a\:6982\:7387\:503c", "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"probability", "=", "0.01"}], ";"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"\:8ba1\:7b97\[Chi]", "^", "2"}], 
+     "\:5206\:5e03\:5728\:7ed9\:5b9a\:6982\:7387\:503c\:4e0b\:7684\:503c"}], 
+    "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"chiValue", "=", 
+     RowBox[{"Quantile", "[", 
+      RowBox[{"chiSquareDist", ",", 
+       RowBox[{"1", "-", "probability"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", "\:8f93\:51fa\:7ed3\:679c", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<Chi Value for CDF=0.01, degrees of freedom=7: \>\"", ",", 
+      "chiValue"}], "]"}], ";"}], "\n"}]}]], "Input",
+ CellChangeTimes->{{3.8998973499222064`*^9, 3.8998973499222064`*^9}},
+ CellLabel->
+  "In[155]:=",ExpressionUUID->"a1576b20-b0a9-45e8-aa7e-d4ea45475509"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Chi Value for CDF=0.01, degrees of freedom=7: \"\>", 
+   "\[InvisibleSpace]", "18.47530690658236`"}],
+  SequenceForm[
+  "Chi Value for CDF=0.01, degrees of freedom=7: ", 18.47530690658236],
+  Editable->False]], "Print",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.8998973515184784`*^9, {3.8998979898589134`*^9, 
+   3.8998979907355456`*^9}},ExpressionUUID->"3b5d8015-83cf-4bd4-993f-\
+cde675824946"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"(*", "\:5b9a\:4e49\:81ea\:7531\:5ea6\:53c2\:6570", "*)"}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{"degreesOfFreedom", "=", "7"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"\:521b\:5efa\[Chi]", "^", "2"}], "\:5206\:5e03\:5bf9\:8c61"}], 
+    "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"chiSquareDist", "=", 
+     RowBox[{"ChiSquareDistribution", "[", "degreesOfFreedom", "]"}]}], ";"}],
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", "\:7ed9\:5b9a\:503c", "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"value", "=", "18.5"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"\:8ba1\:7b97\[Chi]", "^", "2"}], 
+     "\:5206\:5e03\:4e2d\:7ed9\:5b9a\:503c\:4ee5\:4e0b\:7684\:7d2f\:79ef\:6982\
+\:7387", 
+     RowBox[{"\:ff08", "\:6bd4\:4f8b", "\:ff09"}]}], "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"proportion", "=", 
+     RowBox[{"CDF", "[", 
+      RowBox[{"chiSquareDist", ",", "value"}], "]"}]}], ";"}], "\n", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", "\:8f93\:51fa\:7ed3\:679c", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<Proportion of values below \>\"", ",", "value", ",", 
+      "\"\< in Chi Square Distribution (degrees of freedom = \>\"", ",", 
+      "degreesOfFreedom", ",", "\"\<): \>\"", ",", "proportion"}], "]"}], 
+    ";"}], "\[IndentingNewLine]", "\n"}]}]], "Input",
+ CellChangeTimes->{{3.8998979334548717`*^9, 3.8998980092954617`*^9}},
+ CellLabel->
+  "In[174]:=",ExpressionUUID->"bde17eeb-fda8-4c2c-acf8-3a86cdccbd5f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Proportion of values below \"\>", "\[InvisibleSpace]", "18.5`",
+    "\[InvisibleSpace]", "\<\" in Chi Square Distribution (degrees of freedom \
+= \"\>", "\[InvisibleSpace]", "7", "\[InvisibleSpace]", "\<\"): \"\>", 
+   "\[InvisibleSpace]", "0.9900933377299064`"}],
+  SequenceForm[
+  "Proportion of values below ", 18.5, 
+   " in Chi Square Distribution (degrees of freedom = ", 7, "): ", 
+   0.9900933377299064],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.899898015729023*^9},
+ CellLabel->
+  "\:6b63\:5728\:8ba1\:7b97In[174]:=",ExpressionUUID->"b529caf0-9880-48dd-\
+a384-443cf78657c8"]
+}, Open  ]]
+},
+WindowSize->{576.75, 443.25},
+WindowMargins->{{Automatic, 63.75}, {0.75, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (2022\:5e748\:670822\
+\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"68e6df28-82f4-442f-b7e6-9bc4a27c9c65"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1690, 38, 290, "Input",ExpressionUUID->"9d9a5dca-2e5a-4ed5-9d74-ce8c23596f96"],
+Cell[2273, 62, 247, 5, 32, "Output",ExpressionUUID->"86520e81-94fb-4efa-b6c5-9ef34b49edf4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2557, 72, 1488, 38, 344, "Input",ExpressionUUID->"a1576b20-b0a9-45e8-aa7e-d4ea45475509"],
+Cell[4048, 112, 476, 12, 22, "Print",ExpressionUUID->"3b5d8015-83cf-4bd4-993f-cde675824946"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4561, 129, 1661, 40, 401, "Input",ExpressionUUID->"bde17eeb-fda8-4c2c-acf8-3a86cdccbd5f"],
+Cell[6225, 171, 642, 14, 40, "Print",ExpressionUUID->"b529caf0-9880-48dd-a384-443cf78657c8"]
+}, Open  ]]
+}
+]
+*)
+

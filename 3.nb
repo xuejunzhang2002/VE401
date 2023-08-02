@@ -1,0 +1,157 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4990,        149]
+NotebookOptionsPosition[      4269,        127]
+NotebookOutlinePosition[      4693,        144]
+CellTagsIndexPosition[      4650,        141]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Given", " ", "values"}], "*)"}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{"populationMean", "=", "0.255"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"alpha", "=", "0.05"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"sampleMean", "=", "0.2546"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"populationStdDev", "=", "0.0001"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"sampleSize", "=", "10"}], ";"}], "\n", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Calculate", " ", "the", " ", "Z", " ", "statistic"}], "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"zStatistic", "=", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"sampleMean", "-", "populationMean"}], ")"}], "/", 
+      RowBox[{"(", 
+       RowBox[{"populationStdDev", "/", 
+        RowBox[{"Sqrt", "[", "sampleSize", "]"}]}], ")"}]}]}], ";"}], "\n", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+     "Calculate", " ", "the", " ", "critical", " ", "value", " ", "for", " ", 
+      "alpha"}], "=", "0.05"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"criticalValue", "=", 
+     RowBox[{"Quantile", "[", 
+      RowBox[{
+       RowBox[{"NormalDistribution", "[", "]"}], ",", 
+       RowBox[{"1", "-", 
+        RowBox[{"alpha", "/", "2"}]}]}], "]"}]}], ";"}], "\n", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Print", " ", "the", " ", "Z", " ", "statistic", " ", "and", " ", 
+     "critical", " ", "value"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<Z Statistic: \>\"", ",", "zStatistic"}], "]"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<Critical Value (Z0.025): \>\"", ",", "criticalValue"}], 
+     "]"}], ";"}], "\n", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Perform", " ", "the", " ", "hypothesis", " ", "test"}], "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Abs", "[", "zStatistic", "]"}], ">", "criticalValue"}], ",", 
+     RowBox[{
+     "Print", "[", 
+      "\"\<Reject H0: The true mean diameter is different from 0.255 \
+inch.\>\"", "]"}], ",", 
+     RowBox[{
+     "Print", "[", 
+      "\"\<Fail to reject H0: There is not enough evidence to conclude that \
+the true mean diameter is different from 0.255 inch.\>\"", "]"}]}], "]"}], 
+   "\n"}]}]], "Input",
+ CellChangeTimes->{{3.899900553054155*^9, 3.8999005911837344`*^9}, {
+  3.899900625047703*^9, 3.8999006398138742`*^9}, {3.89990071516926*^9, 
+  3.8999007202994742`*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"43e3fbac-eba6-4e85-9896-dc4ada8c6bb6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Z Statistic: \"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "12.649110640673879`"}]}],
+  SequenceForm["Z Statistic: ", -12.649110640673879`],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.8999007231482697`*^9},
+ CellLabel->
+  "\:6b63\:5728\:8ba1\:7b97In[10]:=",ExpressionUUID->"87d3a779-7867-4394-b00e-\
+c18c8f9745a4"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Critical Value (Z0.025): \"\>", "\[InvisibleSpace]", 
+   "1.9599639845400538`"}],
+  SequenceForm["Critical Value (Z0.025): ", 1.9599639845400538`],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.899900723152277*^9},
+ CellLabel->
+  "\:6b63\:5728\:8ba1\:7b97In[10]:=",ExpressionUUID->"31147cd5-0e08-474c-a7bd-\
+4a48d1bda6ce"],
+
+Cell[BoxData["\<\"Reject H0: The true mean diameter is different from 0.255 \
+inch.\"\>"], "Print",
+ CellChangeTimes->{3.899900723159816*^9},
+ CellLabel->
+  "\:6b63\:5728\:8ba1\:7b97In[10]:=",ExpressionUUID->"07da639a-eb1d-4d03-b089-\
+44f27f8059eb"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{573.75, 601.5},
+WindowMargins->{{Automatic, 29.625}, {9.375, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (2022\:5e748\:670822\
+\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"c9cd8518-6eba-44c2-b3b3-c85b074ce7de"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 2635, 70, 637, "Input",ExpressionUUID->"43e3fbac-eba6-4e85-9896-dc4ada8c6bb6"],
+Cell[CellGroupData[{
+Cell[3240, 96, 370, 9, 22, "Print",ExpressionUUID->"87d3a779-7867-4394-b00e-c18c8f9745a4"],
+Cell[3613, 107, 376, 9, 22, "Print",ExpressionUUID->"31147cd5-0e08-474c-a7bd-4a48d1bda6ce"],
+Cell[3992, 118, 249, 5, 22, "Print",ExpressionUUID->"07da639a-eb1d-4d03-b089-44f27f8059eb"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
